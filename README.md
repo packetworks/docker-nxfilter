@@ -1,5 +1,10 @@
 [![](https://badge.imagelayers.io/packetworks/nxfilter:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter:latest 'Get your own badge on imagelayers.io')
 
+# What is NxFadmin?
+
+[Project Page](https://bitbucket.org/DeepWoods/nxfadmin/src)
+A modern GUI for NxFilter.
+
 # What is NxFilter?
   
 ![test](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)
