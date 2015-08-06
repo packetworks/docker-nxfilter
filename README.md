@@ -1,4 +1,4 @@
-[![](https://badge.imagelayers.io/packetworks/nxfilter:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter:latest 'Get your own badge on imagelayers.io')  
+[![](https://badge.imagelayers.io/packetworks/nxfilter-base:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter:latest 'Get your own badge on imagelayers.io')  
   
 ![nothing](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
 
@@ -11,8 +11,7 @@ This image is based on: [1science/java](https://registry.hub.docker.com/u/1scien
 
 # Supported Tags
 
--        [`nxfadmin-2.8.4`, `latest`](https://github.com/packetworks/docker-nxfadmin/tree/nxfadmin-2.8.4)
--        [`nxfilter-2.8.4`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-2.8.4) (NxFilter without the modern UI)
+-        [`latest`](https://github.com/packetworks/docker-nxfadmin/tree/nxfilter-latest)
 
 # Usage:
 
