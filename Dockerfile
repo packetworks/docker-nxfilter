@@ -1,14 +1,12 @@
 #
-# Latest NxFadmin from bitbucket repo
+#  NxFilter base image
 #
 
-FROM packetworks/nxfilter:nxfilter-latest
+FROM 1science/java:oracle-jre-7
 
-RUN wget https://bitbucket.org/DeepWoods/nxfadmin/get/master.zip
-    mkdir /nxfilter/skins
-    unzip master.zip -d /nxfilter/skins/
-    mv /nxfilter/skins/De*/skins/nxfadmin /nxfilter/skins/
-    rm -rf /nxfilter/skins/De*
-    rm -f *.zip
-    echo "www_dir = skins/nxfadmin" >> /nxfilter/conf/cfg.default
-CMD /nxfilter/bin/startup.sh
+MAINTAINER Charles Gunzelman
+
+# Download nxfilter
+RUN wget http://nxfilter.org/download/nxfilter-2.8.4.zip
+    mkdir /nxfilter
+    unzip nxfil* -d /nxfilter
