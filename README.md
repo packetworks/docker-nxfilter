@@ -10,6 +10,7 @@ A modern GUI for NxFilter.
 ![test](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)
   
 [Home Page](http://www.nxfilter.org/)  
+An easy to use DNS server with configurable filters and user controls.
   
 This image is based on: [1science/java](https://registry.hub.docker.com/u/1science/java/) which uses Alpine Linux as a base, and they have slimmed down the Java install footprint on the system.
 
