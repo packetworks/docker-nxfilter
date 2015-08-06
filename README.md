@@ -1,8 +1,8 @@
-[![](https://badge.imagelayers.io/packetworks/nxfilter:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter:latest 'Get your own badge on imagelayers.io')
-
-# What is NxFilter?
+[![](https://badge.imagelayers.io/packetworks/nxfilter:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter:latest 'Get your own badge on imagelayers.io')  
   
-![test](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)
+![test](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
+  
+# What is NxFilter?
   
 [Home Page](http://www.nxfilter.org/)  
   
