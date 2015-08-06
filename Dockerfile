@@ -2,7 +2,7 @@
 # Latest NxFadmin from bitbucket repo
 #
 
-FROM packetworks/nxfilter:latest
+FROM packetworks/nxfilter:nxfilter-latest
 
 RUN wget https://bitbucket.org/DeepWoods/nxfadmin/get/master.zip
     mkdir /nxfilter/skins
