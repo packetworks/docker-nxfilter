@@ -2,7 +2,7 @@
 # Latest NxFadmin from bitbucket repo
 #
 
-FROM packetworks/nxfilter:nxfilter-latest
+FROM packetworks/nxfilter-base:latest
 
 MAINTAINER Charles Gunzelman
 
