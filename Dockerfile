@@ -4,6 +4,8 @@
 
 FROM packetworks/nxfilter:nxfilter-latest
 
+MAINTAINER Charles Gunzelman
+
 RUN wget https://bitbucket.org/DeepWoods/nxfadmin/get/master.zip
 RUN mkdir /nxfilter/skins
 RUN unzip master.zip -d /nxfilter/skins/
