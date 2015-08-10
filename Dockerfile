@@ -10,6 +10,6 @@ MAINTAINER Charles Gunzelman
 RUN wget http://nxfilter.org/download/nxfilter-2.8.5.zip
 RUN mkdir /nxfilter
 RUN unzip nxfil* -d /nxfilter
-run rm -f *.zip
+RUN rm -f *.zip
 RUN chmod +x /nxfilter/bin/startup.sh
 CMD /nxfilter/bin/startup.sh
