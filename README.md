@@ -10,8 +10,8 @@ This image is based on: [1science/java](https://registry.hub.docker.com/u/1scien
 
 # Supported Tags
 
--        [`nxfadmin`, `latest`](https://github.com/packetworks/docker-nxfadmin/tree/nxfadmin-2.8.4)
--        [`nxfilter-latest`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-2.8.4) (NxFilter without the modern UI)
+-        [`2.8.4`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-2.8.4)
+
 
 # Usage:
 
