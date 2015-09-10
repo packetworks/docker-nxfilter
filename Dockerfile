@@ -7,7 +7,7 @@ FROM 1science/java:oracle-jre-7
 MAINTAINER Charles Gunzelman
 
 # Download nxfilter
-RUN wget http://nxfilter.org/download/nxfilter-2.8.5.zip
+RUN wget http://nxfilter.org/download/nxfilter-2.8.7.zip
 RUN mkdir /nxfilter
 RUN unzip nxfil* -d /nxfilter
 RUN rm -f *.zip
