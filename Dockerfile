@@ -15,3 +15,4 @@ RUN rm -f *.zip
 RUN echo " " >> /nxfilter/conf/cfg.default
 RUN echo "www_dir = skins/nxfadmin" >> /nxfilter/conf/cfg.default
 CMD /nxfilter/bin/startup.sh
+
