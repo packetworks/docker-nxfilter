@@ -11,7 +11,7 @@ This image is based on: [1science/java](https://registry.hub.docker.com/u/1scien
 
 # Supported Tags
 
--        [`2.8.5`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-2.8.5)
+-        [`2.8.7`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-2.8.7)
 
 # Usage:
 
