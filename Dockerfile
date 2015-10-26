@@ -6,7 +6,7 @@ FROM packetworks/nxfilter-base:latest
 
 MAINTAINER Charles Gunzelman
 
-RUN wget https://bitbucket.org/DeepWoods/nxfadmin/get/master.zip
+RUN wget -q https://bitbucket.org/DeepWoods/nxfadmin/get/master.zip
 RUN mkdir /nxfilter/skins
 RUN unzip master.zip -d /nxfilter/skins/
 RUN mv /nxfilter/skins/De*/skins/nxfadmin /nxfilter/skins/
