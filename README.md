@@ -10,7 +10,7 @@ This image is based on: [1science/java](https://registry.hub.docker.com/u/1scien
 
 # Supported Tags
 
--        [`2.8.4`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-2.8.4)
+-        [`experimental`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-experimental)
 
 
 # Usage:
