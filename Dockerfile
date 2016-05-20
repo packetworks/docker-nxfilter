@@ -7,10 +7,14 @@ FROM 1science/java:oracle-jre-7
 MAINTAINER Charles Gunzelman
 
 # Download nxfilter
-
-
-    && mkdir /nxfilter \
-    && unzip nxfil* -d /nxfilter
+RUN wget --spider --force-html -r -l1 \
+  http://www.nxfilter.org/download.php 2>&1 \
+  | grep '^--' | awk '{ print $3 }' \
+  | grep 'nxfilter-' | grep 'zip' \
+  | grep -v 'cloud' | head -n1 > url.txt \
+  && wget -i url.txt
+  && mkdir /nxfilter \
+  && unzip nxfil* -d /nxfilter
 
 
 
