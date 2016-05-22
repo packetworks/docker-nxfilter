@@ -44,5 +44,8 @@ This will run the container interactively, with a persistent data volume mounted
 
 
 # To Do:
+- Finish testing automated builds and webhooks to completely automate the process.
+
+# Done:
 - Create Docker file for both images. Shouldn't be too hard.
-- Set up automated builds of the images. No idea where to start with that one.
+- Set up automated builds of the images.
