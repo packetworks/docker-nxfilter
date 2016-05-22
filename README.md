@@ -1,4 +1,4 @@
-[![](https://badge.imagelayers.io/packetworks/nxfilter-base:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter-base:latest 'Get your own badge on imagelayers.io')  
+[![](https://badge.imagelayers.io/packetworks/nxfilter-base:latest.svg)](https://imagelayers.io/?images=packetworks/nxfilter-base:latest 'Get your own badge on imagelayers.io') << The image is not really 0 Bytes, Usually around 180MB  
   
 ![nothing](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
 
