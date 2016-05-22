@@ -13,14 +13,13 @@ RUN wget --spider --force-html -r -l1 \
   | grep 'nxfilter-' | grep 'zip' \
   | grep -v 'cloud' | head -n1 > url.txt \
   && wget -i url.txt
-  && mkdir /nxfilter \
-  && unzip nxfil* -d /nxfilter
 
-
-
-
-
-
+RUN mkdir /nxfilter \
+  && unzip nxfil* -d /nxfilter \
+  && rm -f *.zip \
+  && chmod +x /nxfilter/bin/startup.sh
+  
+CMD /nxfilter/bin/startup.sh
 
 
 ##RUN echo "http://www.nxfilter.org/"$(curl -sL nxfilter.org/download.php|grep zip|grep nxfilter|head -n1|sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//'  -e '/^$/ d'|tr -d '[:blank:]') > url
