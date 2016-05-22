@@ -41,5 +41,8 @@ old command: ```docker run -it --volumes-from nxfilter-data -p 80:80 -p 53:53 -t
 
 
 # To Do:
+- Finish testing automated builds and webhooks to completely automate the process.
+
+# Done:
 - Create Docker file for both images. Shouldn't be too hard.
-- Set up automated builds of the images. No idea where to start with that one.
+- Set up automated builds of the images.
