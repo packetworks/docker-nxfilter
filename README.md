@@ -1,6 +1,11 @@
 [![](https://badge.imagelayers.io/packetworks/nxfadmin:latest.svg)](https://imagelayers.io/?images=packetworks/nxfadmin:latest 'Get your own badge on imagelayers.io') << The image is not really 0 Bytes, usually around 180MB  
   
 ![nothing](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
+![nothing](https://barmakapproved.files.wordpress.com/2012/07/notapproved.png?w=300)
+## Do not use the NxFadmin branch until further notice. There are a few features missing according to the NxFadmin maintainer. More details here:
+## https://groups.google.com/forum/?fromgroups=&hl=en#!topic/nxfilter200/ryc071Xn4aY  
+This repo is still available for those who are fine with the GUI features of NxFilter 2.x
+  
 # What is NxFadmin?
 
 [Project Page](https://bitbucket.org/DeepWoods/nxfadmin/src)  
