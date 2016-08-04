@@ -18,7 +18,7 @@ This image is based on: [1science/java](https://registry.hub.docker.com/u/1scien
 ## For a single persistent container:
 
 Create your persistent container:  
-```docker run -it nxfilter-data -p 80:80 -p 53:53/udp packetworks/nxfilter:latest```  
+```docker run -it nxfilter -p 80:80 -p 53:53/udp packetworks/nxfilter:latest```  
 ```-it``` starts the container in Interactive mode. It's more complicated than that, but the man pages have more info. ```-p``` forwards a port into the container. We are specifying two different ports here, one for the Web console, and 53 for DNS. You can disconnect from the interactive container with CTRL-P + CTRL-Q.
 
 ## For a transient container with a separate data container:
