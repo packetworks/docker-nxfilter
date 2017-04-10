@@ -3,7 +3,7 @@
 #
 FROM 1science/java:oracle-jre-7
 
-MAINTAINER Charles Gunzelman
+MAINTAINER Charles Gunzelman "cgunzelman@gmail.com"
 
 # Download nxfilter
 RUN wget --spider --force-html -r -l1 \
