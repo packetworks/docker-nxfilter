@@ -3,11 +3,8 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/)
   
 ![nothing](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
-
-# What is NxFilter?
-  
-[Home Page](http://www.nxfilter.org/)  
-An easy to use DNS server with configurable filters and user controls.
+ 
+[NxFilter](http://www.nxfilter.org/) - An easy to use DNS server with configurable filters and user controls.
   
 This image is based on [1science/java](https://registry.hub.docker.com/u/1science/java/) for the slimmed down Java and overall container footprint.
 
@@ -15,7 +12,7 @@ This image is based on [1science/java](https://registry.hub.docker.com/u/1scienc
 
 -        [`latest`](https://github.com/packetworks/docker-nxfadmin/tree/nxfilter-latest)
 
-# Usage:
+# Usage
 
 **For a single persistent container:**
 ```docker run -it nxfilter -p 80:80 -p 53:53/udp packetworks/nxfilter-base:latest```  
@@ -40,9 +37,10 @@ This will run the container interactively, with a persistent data volume mounted
 old command: ```docker run -it --volumes-from nxfilter-data -p 80:80 -p 53:53 -t --rm packetworks/nxfilter:latest```
 
 
-# To Do:
-- Finish testing automated builds and webhooks to completely automate the process.
+# To Do
+- Fully test running in an automated encironment like Shipyard or 
 
-# Done:
+# Done
 - Create Docker file for both images. Shouldn't be too hard.
 - Set up automated builds of the images.
+- Finish testing automated builds and webhooks to completely automate the process.
