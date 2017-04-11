@@ -1,6 +1,3 @@
-#
-#  NxFilter base image
-#
 FROM 1science/java:oracle-jre-7
 
 MAINTAINER Charles Gunzelman "cgunzelman@gmail.com"
@@ -18,5 +15,5 @@ RUN mkdir /nxfilter \
   && rm -f *.zip \
   && chmod +x /nxfilter/bin/startup.sh
 
-CMD ["/nxfilter/bin/startup.sh"]
 #CMD ["/nxfilter/bin/startup.sh","start"]
+CMD ["/nxfilter/bin/startup.sh"]
