@@ -9,5 +9,5 @@ docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              | grep '^--' | awk '{ print $3 }' \
              | grep 'nxfilter-' | grep 'zip' \
              | grep -v 'cloud' | head -n1 | \
-             cut -d'-' -f 2 | sed "s/.zip//"`\
+             cut -d'-' -f 2 | sed "s/.zip//"` \
              -t $IMAGE_NAME .
