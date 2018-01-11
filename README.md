@@ -1,4 +1,4 @@
-[![](https://badge.imagelayers.io/packetworks/nxfadmin:latest.svg)](https://imagelayers.io/?images=packetworks/nxfadmin:latest 'Get your own badge on imagelayers.io') << The image is not really 0 Bytes, usually around 180MB  
+[![](https://images.microbadger.com/badges/image/packetworks/nxfadmin:experimental.svg)](https://microbadger.com/images/packetworks/nxfadmin:experimental "Get your own image badge on microbadger.com") [![Docker Stars](https://img.shields.io/docker/stars/packetworks/nxfadmin.svg)](https://hub.docker.com/r/packetworks/nxfadmin/) [![Docker Pulls](https://img.shields.io/docker/pulls/packetworks/nxfadmin.svg)](https://hub.docker.com/r/packetworks/nxfadmin/)
   
 ![nothing](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
 ![nothing](https://barmakapproved.files.wordpress.com/2012/07/notapproved.png?w=300)
