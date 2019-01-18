@@ -14,14 +14,20 @@ This image is based on [1science/java](https://registry.hub.docker.com/u/1scienc
 # Usage  
 
 **For a single persistent container:**  
-```docker run -it nxfilter -p 80:80 -p 53:53/udp packetworks/nxfilter-base:latest```  
-```-it``` starts the container in Interactive mode. It's more complicated than that, but the man pages have more info. ```-p``` forwards a port into the container. We are specifying two different ports here, one for the Web console, and 53 for DNS. You can disconnect from the interactive container with CTRL-P + CTRL-Q.
-  
+```
+docker run -it \  
+  --name nxfilter \  
+  -p 80:80 \  
+  -p 53:53/udp \  
+  packetworks/nxfilter-base:latest
+```  
+```-it``` starts the container in Interactive mode with a TTY. ```-p``` forwards a port into the container, other ports are needed to utilize all features of nxfilter. 53 UDP is to accept DNS queries coming in, 80 is for the WebUI. The interactive console can be sent to the background with CTRL-P + CTRL-Q.
   
   
   
 **For a transient container with a persistent data volumes**  
-```docker run -dt \  
+```
+docker run -dt \  
   --name nxfilter  \  
   -v nxfilter-conf:/nxfilter/conf   \  
   -v nxfilter-log:/nxfilter/log  \  
