@@ -6,12 +6,12 @@
   
 This image is based on [1science/java](https://registry.hub.docker.com/u/1science/java/) for the slimmed down Java and overall container footprint.
 
-# Supported Tags
+# Supported Tags  
 
 -	[`latest`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-latest)
 -	[`experimental`](https://github.com/packetworks/docker-nxfilter/tree/nxfilter-experimental)
 
-# Usage
+# Usage  
 
 **For a single persistent container:**  
 ```docker run -it nxfilter -p 80:80 -p 53:53/udp packetworks/nxfilter-base:latest```  
@@ -20,14 +20,14 @@ This image is based on [1science/java](https://registry.hub.docker.com/u/1scienc
   
   
   
-**For a transient container with a persistent data volumes**
-```docker run -dt \
-  --name nxfilter  \
-  -v nxfilter-conf:/nxfilter/conf   \
-  -v nxfilter-log:/nxfilter/log  \
-  -v nxfilter-db:/nxfilter/db  \
-  -p 80:80  -p 53:53/udp  \
-  --expose 19002-19004  \
+**For a transient container with a persistent data volumes**  
+```docker run -dt \  
+  --name nxfilter  \  
+  -v nxfilter-conf:/nxfilter/conf   \  
+  -v nxfilter-log:/nxfilter/log  \  
+  -v nxfilter-db:/nxfilter/db  \  
+  -p 80:80  -p 53:53/udp  \  
+  --expose 19002-19004  \  
   packetworks/nxfilter-base:latest
   ```
 
