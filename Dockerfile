@@ -1,4 +1,4 @@
-FROM 1science/java:oracle-jre-7
+FROM 1science/java:oracle-jre-8
 
 MAINTAINER Charles Gunzelman "cgunzelman@gmail.com"
 
