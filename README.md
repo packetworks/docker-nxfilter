@@ -20,27 +20,23 @@ This image is based on [1science/java](https://registry.hub.docker.com/u/1scienc
   
   
   
-**For a transient container with a persistent data container**
+**For a transient container with a persistent data volumes**
+```docker run -dt \
+  --name nxfilter  \
+  -v nxfilter-conf:/nxfilter/conf   \
+  -v nxfilter-log:/nxfilter/log  \
+  -v nxfilter-db:/nxfilter/db  \
+  -p 80:80  -p 53:53/udp  \
+  --expose 19002-19004  \
+  packetworks/nxfilter-base:latest
+  ```
 
-- ```   WARNING  ```  
+This will run the container in the background like a service, with a persistent data volume mounted for each folder that nxfilter modifies data in. Ports 80 and 53 are forwarded to the container for accessing NxFilter admin interface and accepting DNS queries. You may add ```--rm``` so the container will be removed after stopping. All changes will be saved in volumes.
 
-```THIS IS NOT TESTED```  
-
-- ```   WARNING  ```  
-
-**Create your persistent data container:**  
-```docker run -d -v /nxfilter/db --name nxfilter-data --entrypoint /bin/echo busybox nxfilter-data``` The data container will start in the background because of ```-d```, then exit. This is normal. It will not show up in ```docker ps```, only with ```docker ps -a``` because it is not actually running. We specified the volume it will present to other containers with ```-v```. Your NxFilter container will use the volume presented by data container, but data container will not ever run except the second you created it.  
-  
-**Create your transient application container:**  
-```docker run --volumes-from nxfilter-data -p 80:80 -p 53:53/udp --rm packetworks/nxfilter-base:latest /nxfilter/bin/startup.sh```
-
-This will run the container interactively, with a persistent data volume mounted from the data container. Ports 80 and 53 are forwarded to the container for accessing NxFilter admin interface and for sending DNS queries to it. ```--rm``` specifies the container will not persist any changes after stopping. All changes will need to be made in volumes from other containers, or you can mount host directories, or go back to the section labelled ```single persistent container:```
-
-old command: ```docker run -it --volumes-from nxfilter-data -p 80:80 -p 53:53 -t --rm packetworks/nxfilter:latest```
 
 
 # To Do
-- Fully test running in an automated encironment like Shipyard or 
+- Fully test running in an automated encironment like Shipyard or TravisCI
 
 # Done
 - Create Docker file for both images. Shouldn't be too hard.
