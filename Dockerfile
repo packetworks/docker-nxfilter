@@ -14,7 +14,7 @@ RUN wget --spider --force-html -r -l1 \
   | grep -v 'cloud' | head -n1 > url.txt \
   && wget -i url.txt
 
-#Pull SSLSplit from vimagick
+# Pull SSLSplit from vimagick
 COPY --from=vimagick/sslsplit / /
 
 RUN mkdir /nxfilter \
