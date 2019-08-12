@@ -11,5 +11,7 @@ RUN curl -s -L http://www.nxfilter.org/|grep Download \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f *.zip
 
+COPY --from=vimagick/sslsplit / /
+
 #CMD ["/nxfilter/bin/startup.sh","start"]
 CMD ["/nxfilter/bin/startup.sh"]
