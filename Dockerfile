@@ -9,7 +9,7 @@ RUN curl -s -L http://www.nxfilter.org/|grep Download \
   |grep filter-.*zip|grep -v mediafire|xargs -n1 wget -q && mkdir /nxfilter \
   && unzip nxfil* -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f *.zip && apk add --update --no-cache apr
+  && rm -f *.zip && apk add --update apr
 
 # Pull SSLSplit from vimagick
 COPY --from=vimagick/sslsplit / /
