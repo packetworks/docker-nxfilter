@@ -1,7 +1,10 @@
 FROM 1science/java:oracle-jre-8
 
 MAINTAINER Charles Gunzelman "cgunzelman@gmail.com"
-
+LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.vcs-type="Git" \
+      org.label-schema.vcs-url="https://github.com//packetworks/docker-nxfilter"
+      
 # Download nxfilter
 RUN curl -s -L http://www.nxfilter.org/|grep Download \
   |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" \
