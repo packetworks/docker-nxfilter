@@ -12,8 +12,8 @@ RUN curl -s -L http://www.nxfilter.org/|grep Download \
   |xargs -n1 curl -s -L \
   |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" \
   |grep filter-.*zip|grep -v mediafire \
-  |xargs -n1 wget -q && mkdir /nxfilter \
-  && unzip nxfil* -d /nxfilter \
+  |xargs -n1 wget -q && mkdir -p /nxfilter \
+  && unzip -o nxfil* -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f *.zip
 
