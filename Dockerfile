@@ -14,10 +14,13 @@ RUN curl -s -L http://www.nxfilter.org/|grep Download \
   |grep filter-.*zip|grep -v mediafire \
   |xargs -n1 wget -q && mkdir -p /nxfilter \
   && unzip -o nxfil* -d /nxfilter \
+  && cp /nxfilter/config /nxfilter/config-bak
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f *.zip
 
 COPY --from=vimagick/sslsplit / /
+VOLUME /nxfilter/config
+VOLUME /nxfilter/db
+VOLUME /nxfilter/log
 
-#CMD ["/nxfilter/bin/startup.sh","start"]
 CMD ["/nxfilter/bin/startup.sh"]
