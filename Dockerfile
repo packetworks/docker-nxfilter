@@ -14,7 +14,7 @@ RUN curl -s -L http://www.nxfilter.org/|grep Download \
   |grep filter-.*zip|grep -v mediafire \
   |xargs -n1 wget -q && mkdir -p /nxfilter \
   && unzip -o nxfil* -d /nxfilter \
-  && cp /nxfilter/config /nxfilter/config-bak \
+  && cp /nxfilter/conf /nxfilter/conf-bak \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f *.zip
 
