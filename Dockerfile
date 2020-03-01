@@ -23,4 +23,7 @@ VOLUME /nxfilter/config
 VOLUME /nxfilter/db
 VOLUME /nxfilter/log
 
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 CMD ["/nxfilter/bin/startup.sh"]
