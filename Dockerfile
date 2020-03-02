@@ -19,9 +19,6 @@ RUN curl -s -L http://www.nxfilter.org/|grep Download \
   && rm -f *.zip
 
 COPY --from=vimagick/sslsplit / /
-VOLUME /nxfilter/config
-VOLUME /nxfilter/db
-VOLUME /nxfilter/log
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
