@@ -38,13 +38,3 @@ docker run -dt \
 ```
 
 This will run the container in the background like a service, with a persistent data volume mounted for each folder that nxfilter modifies data in. Ports 80 and 53 are forwarded to the container for accessing NxFilter admin interface and accepting DNS queries. You may add ```--rm``` so the container will be removed after stopping. All changes will be saved in volumes.
-
-
-
-# To Do
-- Fully test running in an automated encironment like Shipyard or TravisCI
-
-# Done
-- Create Docker file for both images. Shouldn't be too hard.
-- Set up automated builds of the images.
-- Finish testing automated builds and webhooks to completely automate the process.
