@@ -10,9 +10,10 @@ RUN wget http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.p
   && mkdir /nxfilter \
   && unzip nxfil* -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f *.zip && apk add --update apr
+  && rm -f *.zip
 
-# Pull SSLSplit from vimagick for edge cases
+# Include the SSL-Split binary,
+# not used by default.
 COPY --from=vimagick/sslsplit / /
 
 COPY entrypoint.sh /entrypoint.sh
@@ -21,6 +22,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/nxfilter/bin/startup.sh"]
 
 
+#RUN curl -s -L http://www.nxfilter.org/|grep Download |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" |grep download|uniq |xargs -n1 curl -s -L |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" |grep filter-.*zip|grep -v mediafire |xargs -n1 wget -q && mkdir -p /nxfilter && unzip -o nxfil* -d /nxfilter && cp -R /nxfilter/conf /nxfilter/conf-default && chmod +x /nxfilter/bin/startup.sh && rm -f *.zip
 ##RUN echo "http://www.nxfilter.org/"$(curl -sL nxfilter.org/download.php|grep zip|grep nxfilter|head -n1|sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//'  -e '/^$/ d'|tr -d '[:blank:]') > url
 #RUN wget -q --convert-links http://www.nxfilter.org/download.php ; cat download.php | sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//' -e '/^$/ d'|tr - d '[:blank:]'|grep zip|grep /nxfilter| head -n1 > url
 #RUN wget -r --no-parent -A 'nxfilter*.zip' http://www.nxfilter.org/download.php
