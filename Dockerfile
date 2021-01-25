@@ -1,9 +1,18 @@
-FROM 1science/java:oracle-jre-8
+FROM balenalib/armv7hf-debian
 
 MAINTAINER Charles Gunzelman
 LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.vcs-type="Git" \
       org.label-schema.vcs-url="https://github.com/packetworks/docker-nxfilter"
+
+ENV container docker
+
+RUN apt -y update && \
+    apt -y upgrade && \
+    apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev && \
+    apt -y clean autoclean && \
+    apt -y autoremove && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}
 
 # Download nxfilter
 RUN wget http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip \ 
@@ -12,9 +21,6 @@ RUN wget http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.p
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f *.zip
 
-# Include the SSL-Split binary,
-# not used by default.
-COPY --from=vimagick/sslsplit / /
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
