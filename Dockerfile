@@ -12,7 +12,7 @@ RUN apt -y update \
   && apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev \
   && apt -y clean autoclean \
   && apt -y autoremove \
-  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log \
+  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
 RUN wget http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip \ 
   && mkdir /nxfilter \
