@@ -1,13 +1,6 @@
 name: 'Build and publish docker images (all platforms)'
 
-on:
-  push:
-    branches:
-      # - master
-      - github-workflow
-    tags:
-      - 'v*.*.*'
-    pull_request:
+on: [push]
 
 jobs:
   release:
