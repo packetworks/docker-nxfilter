@@ -14,8 +14,9 @@ RUN apt -y update \
   && apt -y autoremove \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
-RUN wget http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip \ 
-  && mkdir /nxfilter \
+RUN wget http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip
+
+RUN mkdir /nxfilter \
   && unzip nxfil* -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f *.zip
