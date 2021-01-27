@@ -35,7 +35,6 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.docker_meta.outputs.tags }}
-          labels: packetworks/nxfilter-base:pi-experimental 
-          # labels: ${{ steps.docker_meta.outputs.labels }}
+          push: true
+          tags: packetworks/nxfilter-base:pi-experimental 
+          labels: ${{ steps.docker_meta.outputs.labels }}
