@@ -1,4 +1,4 @@
-FROM balenalib/armv7hf-debian
+FROM debian
 
 MAINTAINER Charles Gunzelman
 LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
