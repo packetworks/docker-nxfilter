@@ -23,9 +23,9 @@ jobs:
     - uses: actions/setup-node@v1
     - name: Check version.txt against curver.php
       run: |
-        echo "VERSION=$(curl http://www.nxfilter.org/curver.php)" >> $GITHUB_ENV
+        echo "VERSION=$(curl --retry 10 http://www.nxfilter.org/curver.php)" >> $GITHUB_ENV
         if [[ $(< version.txt) != "$VERSION" ]]; 
-        then echo "UPDATE=true" >> $GITHUB_ENV && curl http://www.nxfilter.org/curver.php > version.txt; 
+        then echo "UPDATE=true" >> $GITHUB_ENV && curl --retry 10 http://www.nxfilter.org/curver.php > version.txt; 
         fi
         
     - name: Push back to branch
