@@ -14,7 +14,10 @@ RUN apt -y update \
   && apt -y autoremove \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
-RUN [ "/bin/sh", "-c", "'wget --output-document=nxfilter.zip http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip'" ]
+#RUN wget --output-document=nxfilter.zip http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip'"
+RUN curl http://www.nxfilter.org/curver.php > version \
+  && awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip}' version > url.txt \
+  && wget -i url.txt -O nxfilter.zip
 
 RUN mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
