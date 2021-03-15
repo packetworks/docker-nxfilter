@@ -12,12 +12,12 @@ RUN apt -y update \
   && apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev \
   && apt -y clean autoclean \
   && apt -y autoremove \
-  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
+  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log \
+  wget -i url.txt -O nxfilter.zip
 
 
 
-RUN wget -i url.txt -O nxfilter.zip \
-  && mkdir /nxfilter \
+RUN mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
