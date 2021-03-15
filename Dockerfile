@@ -13,7 +13,7 @@ RUN apt -y update \
   && apt -y clean autoclean \
   && apt -y autoremove \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log \
-  wget -i url.txt -O nxfilter.zip
+  && wget -i url.txt -O nxfilter.zip
 
 
 
