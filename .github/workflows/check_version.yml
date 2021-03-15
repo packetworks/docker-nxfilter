@@ -2,7 +2,7 @@
 # If the version string in version.txt differs from the generated string, 
 # a build job is triggered and the string in version.txt is updated.
 
-name: Generate Output
+name: Fetch and Compare NxFilter version
 
 on:
   schedule:
@@ -26,7 +26,7 @@ jobs:
         echo "VERSION=$(curl --retry 10 http://www.nxfilter.org/curver.php)" >> $GITHUB_ENV
         if [[ $(< version.txt) != "$VERSION" ]]; 
         then echo "UPDATE=true" >> $GITHUB_ENV && curl --retry 10 http://www.nxfilter.org/curver.php > version.txt;
-        && awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip"}' version.txt > url.txt;
+        awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip"}' version.txt > url.txt;
         fi
         
     - name: Push back to branch
