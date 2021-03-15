@@ -14,18 +14,10 @@ RUN apt -y update \
   && apt -y autoremove \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
-#RUN wget --output-document=nxfilter.zip http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip'"
-#RUN curl http://www.nxfilter.org/curver.php > version \
-#  && awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip}' version > url.txt \
-#RUN echo "http://pub.nxfilter.org/nxfilter-" > url.txt \
-#  && curl http://www.nxfilter.org/curver.php >> url.txt \
-#  && echo .zip >> url.txt \
-#  && tr -d '\n' < url.txt > url \
-#  && wget -i url.txt -O nxfilter.zip
 
-RUN wget -i url.txt -O nxfilter.zip
 
-RUN mkdir /nxfilter \
+RUN wget -i url.txt -O nxfilter.zip \
+  && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
@@ -43,3 +35,12 @@ CMD ["/nxfilter/bin/startup.sh"]
 #RUN curl -s -L http://www.nxfilter.org/|grep Download|sed -e 's/<a /\n<a /g'|sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//' -e '/^$/ d'|xargs -n1 curl -s -L|grep zip|sed -e 's/<a /\n<a /g'|sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//' -e '/^$/ d'|grep -v dropbox|grep -v logon|grep -v cloud|grep zip \
 #RUN wget --spider --force-html -r -l1 http://www.nxfilter.org/download.php 2>&1 | grep '^--' | awk '{ print $3 }'| grep 'nxfilter-' | grep 'zip'| grep -v 'cloud' | head -n1 > url.txt && wget -i url.txt
 #CMD /nxfilter/bin/startup.sh
+
+#RUN wget --output-document=nxfilter.zip http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip'"
+#RUN curl http://www.nxfilter.org/curver.php > version \
+#  && awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip}' version > url.txt \
+#RUN echo "http://pub.nxfilter.org/nxfilter-" > url.txt \
+#  && curl http://www.nxfilter.org/curver.php >> url.txt \
+#  && echo .zip >> url.txt \
+#  && tr -d '\n' < url.txt > url \
+#  && wget -i url.txt -O nxfilter.zip
