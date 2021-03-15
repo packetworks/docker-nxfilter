@@ -7,10 +7,10 @@ name: Generate Output
 on:
   schedule:
     - cron:  '0 0 * * *'
-  push:
-    branches: [ nxfilter-pi-experimental ]
-  pull_request:
-    branches: [ nxfilter-pi-experimental ]
+#  push:
+#    branches: [ nxfilter-pi-experimental ]
+#  pull_request:
+#    branches: [ nxfilter-pi-experimental ]
 env:
   VERSION: ""
 
@@ -25,7 +25,8 @@ jobs:
       run: |
         echo "VERSION=$(curl --retry 10 http://www.nxfilter.org/curver.php)" >> $GITHUB_ENV
         if [[ $(< version.txt) != "$VERSION" ]]; 
-        then echo "UPDATE=true" >> $GITHUB_ENV && curl --retry 10 http://www.nxfilter.org/curver.php > version.txt; 
+        then echo "UPDATE=true" >> $GITHUB_ENV && curl --retry 10 http://www.nxfilter.org/curver.php > version.txt;
+        && awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip"}' version.txt > url.txt;
         fi
         
     - name: Push back to branch
