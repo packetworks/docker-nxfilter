@@ -17,11 +17,13 @@ RUN apt -y update \
 #RUN wget --output-document=nxfilter.zip http://pub.nxfilter.org/nxfilter-`curl http://www.nxfilter.org/curver.php`.zip'"
 #RUN curl http://www.nxfilter.org/curver.php > version \
 #  && awk '{print  "http://pub.nxfilter.org/nxfilter-"$0".zip}' version > url.txt \
-RUN echo "http://pub.nxfilter.org/nxfilter-" > url.txt \
-  && curl http://www.nxfilter.org/curver.php >> url.txt \
-  && echo .zip >> url.txt \
-  && tr -d '\n' < url.txt > url \
-  && wget -i url -O nxfilter.zip
+#RUN echo "http://pub.nxfilter.org/nxfilter-" > url.txt \
+#  && curl http://www.nxfilter.org/curver.php >> url.txt \
+#  && echo .zip >> url.txt \
+#  && tr -d '\n' < url.txt > url \
+#  && wget -i url.txt -O nxfilter.zip
+
+RUN wget -i url.txt -O nxfilter.zip
 
 RUN mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
