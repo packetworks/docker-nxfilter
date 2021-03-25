@@ -41,10 +41,9 @@ This will run the container in the background like a service, with a persistent 
 
 
 
-# To Do
-- Fully test running in an automated encironment like Shipyard or TravisCI
-
-# Done
-- Create Docker file for both images. Shouldn't be too hard.
-- Set up automated builds of the images.
-- Finish testing automated builds and webhooks to completely automate the process.
+Thank you to my contributors and testers
+Daniel Gibbs
+Vincent Tacquet
+Adam Trust
+Daniele (brugnara)
+Nathan Sanders
