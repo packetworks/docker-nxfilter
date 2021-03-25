@@ -1,7 +1,7 @@
 [![](https://images.microbadger.com/badges/image/packetworks/nxfadmin.svg)](https://microbadger.com/images/packetworks/nxfadmin "Get your own image badge on microbadger.com") [![Docker Stars](https://img.shields.io/docker/stars/packetworks/nxfadmin.svg)](https://hub.docker.com/r/packetworks/nxfadmin/) [![Docker Pulls](https://img.shields.io/docker/pulls/packetworks/nxfadmin.svg)](https://hub.docker.com/r/packetworks/nxfadmin/)
   
-![nothing](http://www.nxfilter.org/p2/wp-content/uploads/2014/07/rb_logo41.png)  
-![nothing](https://barmakapproved.files.wordpress.com/2012/07/notapproved.png?w=300)
+![](https://nxfilter.org/p3/wp-content/uploads/2013/10/rb_logo41.png)  
+![](https://barmakapproved.files.wordpress.com/2012/07/notapproved.png?w=300)
 ## Do not use the NxFadmin branch until further notice. There are a few features missing according to the NxFadmin maintainer. More details here:
 ## https://groups.google.com/forum/?fromgroups=&hl=en#!topic/nxfilter200/ryc071Xn4aY  
 This repo is still available for those who are fine with the GUI features of NxFilter 2.x
