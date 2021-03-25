@@ -3,8 +3,6 @@
 ![](https://nxfilter.org/p3/wp-content/uploads/2013/10/rb_logo41.png)  
  
 [NxFilter](http://www.nxfilter.org/) - An easy to use DNS server with configurable filters and user controls.
-  
-This image is based on [1science/java](https://registry.hub.docker.com/u/1science/java/) for the slimmed down Java and overall container footprint.
 
 # Supported Tags
 
