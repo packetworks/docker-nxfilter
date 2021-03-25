@@ -1,6 +1,6 @@
-[![](https://images.microbadger.com/badges/image/packetworks/nxfilter-base.svg)](https://microbadger.com/images/packetworks/nxfilter-base "Get your own image badge on microbadger.com")  [![Docker Stars](https://img.shields.io/docker/stars/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/)  [![Docker Pulls](https://img.shields.io/docker/pulls/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/)
+![[](https://images.microbadger.com/badges/image/packetworks/nxfilter-base.svg)](https://microbadger.com/images/packetworks/nxfilter-base "Get your own image badge on microbadger.com")  [![Docker Stars](https://img.shields.io/docker/stars/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/)  [![Docker Pulls](https://img.shields.io/docker/pulls/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/)
   
-![nothing](https://nxfilter.org/p3/wp-content/uploads/2013/10/rb_logo41.png)  
+![](https://nxfilter.org/p3/wp-content/uploads/2013/10/rb_logo41.png)  
  
 [NxFilter](http://www.nxfilter.org/) - An easy to use DNS server with configurable filters and user controls.
   
