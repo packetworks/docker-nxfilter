@@ -5,7 +5,7 @@ LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.vcs-type="Git" \
       org.label-schema.vcs-url="https://github.com/packetworks/docker-nxfilter"
 
-COPY entrypoint.sh url.txt /
+COPY entrypoint.sh url.txt ./
 
 # Download and extract nxfilter
 RUN wget -i url.txt -O nxfilter.zip \
