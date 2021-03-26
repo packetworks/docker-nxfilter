@@ -17,12 +17,10 @@ COPY entrypoint.sh url.txt ./
 #  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
 RUN apk update \
-  && apk add openjdk8-jre \
-  && rm -f /var/cache/apk/*
-  
-RUN wget -i url.txt -O nxfilter.zip
-
-RUN mkdir /nxfilter \
+  && apk add openjdk8-jre curl \
+  && rm -f /var/cache/apk/* \
+  && xargs <url.txt curl -o nxfilter.zip -s \
+  && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
