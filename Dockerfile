@@ -20,8 +20,9 @@ RUN apk update \
   && apk add openjdk8-jre \
   && rm -f /var/cache/apk/*
   
-RUN wget -i url.txt -O nxfilter.zip \
-  && mkdir /nxfilter \
+RUN wget -i url.txt -O nxfilter.zip
+
+RUN mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
