@@ -16,16 +16,15 @@ COPY entrypoint.sh url.txt ./
 #  && apt -y autoremove \
 #  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
-
-
 RUN apk update \
   && apk add openjdk8-jre \
-  && wget -i url.txt -O nxfilter.zip \
+  && rm -f /var/cache/apk/*
+  
+RUN wget -i url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f nxfilter.zip \
-  && rm -f /var/cache/apk/*
+  && rm -f nxfilter.zip
 
 ENTRYPOINT ["entrypoint.sh"]
 
