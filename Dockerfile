@@ -1,4 +1,4 @@
-FROM debian
+FROM alpine:latest
 
 MAINTAINER Charles Gunzelman
 LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
@@ -7,24 +7,27 @@ LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
 
 ENV container docker
 
-COPY entrypoint.sh url.txt /
+COPY entrypoint.sh url.txt ./
 
-RUN apt -y update \ 
-  && apt -y upgrade \
-  && apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev \
-  && apt -y clean autoclean \
-  && apt -y autoremove \
-  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
+#RUN apt -y update \ 
+#  && apt -y upgrade \
+#  && apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev \
+#  && apt -y clean autoclean \
+#  && apt -y autoremove \
+#  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
 
 
-RUN wget -i url.txt -O nxfilter.zip \
+RUN apk update \
+  && apk add openjdk8-jre \
+  && wget -i url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f nxfilter.zip
+  && rm -f nxfilter.zip \
+  && rm -f /var/cache/apk/*
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
 
 CMD ["/nxfilter/bin/startup.sh"]
 
