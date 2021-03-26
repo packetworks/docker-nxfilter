@@ -41,9 +41,9 @@ This will run the container in the background like a service, with a persistent 
 
 
 
-Thank you to my contributors and testers
-Daniel Gibbs
-Vincent Tacquet
-Adam Trust
-Daniele (brugnara)
-Nathan Sanders
+Thank you to my contributors and testers  
+Daniel Gibbs  
+Vincent Tacquet  
+Adam Trust  
+Daniele (brugnara)  
+Nathan Sanders  
