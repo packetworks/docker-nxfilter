@@ -12,7 +12,8 @@ RUN wget -i url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f nxfilter.zip
+  && rm -f nxfilter.zip \
+  && cp entrypoint.sh /entrypoint.sh
 
 # Not enabled by default
 COPY --from=vimagick/sslsplit / /
