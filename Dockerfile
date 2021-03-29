@@ -7,7 +7,7 @@ LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
 
 ENV container docker
 
-COPY entrypoint.sh ./ 
+COPY entrypoint.sh / 
 COPY url.txt /
 
 #RUN apt -y update \ 
