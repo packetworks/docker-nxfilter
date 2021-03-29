@@ -24,10 +24,8 @@ RUN apk update \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
-  
-RUN cp /entrypoint.sh ./entrypoint.sh
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/nxfilter/bin/startup.sh"]
 
