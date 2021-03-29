@@ -7,8 +7,7 @@ LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
 
 ENV container docker
 
-COPY entrypoint.sh / 
-COPY url.txt /
+COPY entrypoint.sh url.txt /
 
 #RUN apt -y update \ 
 #  && apt -y upgrade \
@@ -24,8 +23,9 @@ RUN apk update \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f nxfilter.zip \
-  && cp /entrypoint.sh ./entrypoint.sh
+  && rm -f nxfilter.zip
+  
+RUN cp /entrypoint.sh ./entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]
 
