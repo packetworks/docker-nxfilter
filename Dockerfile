@@ -23,7 +23,8 @@ RUN apk update \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
-  && rm -f nxfilter.zip
+  && rm -f nxfilter.zip \
+  && cp entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]
 
