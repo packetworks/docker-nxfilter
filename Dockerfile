@@ -14,7 +14,7 @@ RUN apt -y update \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
 # Include the SSL-Split binary, not used by default.
-COPY --from=vimagick/sslsplit /bin/sslsplit /bin/
+COPY --from=vimagick/sslsplit / /
 
 # Populate ingredients from Git repo.
 COPY entrypoint.sh url.txt /
