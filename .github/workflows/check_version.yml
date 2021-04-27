@@ -5,8 +5,6 @@
 name: Fetch and Compare NxFilter version
 
 on:
-  push:
-    branches: [ nxfilter-debian ]
   schedule:
     - cron:  '0 0 * * *'
 #  push:
