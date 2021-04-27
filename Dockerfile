@@ -8,7 +8,7 @@ ENV container docker
 
 RUN apt -y update \ 
   && apt -y upgrade \
-  && apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev \
+  && apt -y install wget unzip default-jre-headless libtcnative-1 libapr1 libapr1-dev \
   && apt -y clean autoclean \
   && apt -y autoremove \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
