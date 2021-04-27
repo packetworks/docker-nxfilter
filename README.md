@@ -2,7 +2,8 @@
   
 ![](https://nxfilter.org/p3/wp-content/uploads/2013/10/rb_logo41.png)  
  
-[NxFilter](http://www.nxfilter.org/) - An easy to use DNS server with configurable filters and user controls.
+[NxFilter](http://www.nxfilter.org/) - An easy to use DNS server with configurable filters and user controls  
+MultiArch builds are now in place for x86_64,i386,ARMv6,ARMv7,ARM64
 
 # Supported Tags
 
