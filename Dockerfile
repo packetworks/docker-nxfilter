@@ -6,9 +6,6 @@ LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.vcs-url="https://github.com/packetworks/docker-nxfilter"
 ENV container docker
 
-# Include the SSL-Split binary, not used by default.
-COPY --from=vimagick/sslsplit / /
-
 RUN apt -y update \ 
   && apt -y upgrade \
   && apt -y install wget unzip default-jre libtcnative-1 libapr1 libapr1-dev \
@@ -16,6 +13,10 @@ RUN apt -y update \
   && apt -y autoremove \
   && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
+# Include the SSL-Split binary, not used by default.
+COPY --from=vimagick/sslsplit / /
+
+# Populate ingredients from Git repo.
 COPY entrypoint.sh url.txt /
 
 # Download and unzip nxfilter
