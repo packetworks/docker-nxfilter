@@ -41,10 +41,10 @@ jobs:
           push: true
           tags: packetworks/nxfilter-base:latest 
           labels: ${{ steps.docker_meta.outputs.labels }}
-      - uses: meeDamian/sync-readme@v1.0.6
-        with:
-          user: ${{ secrets.DOCKERHUB_USERNAME }}
-          #pass: ${{ secrets.DOCKER_PASS }}
-          pass: ${{ secrets.DOCKERHUB_TOKEN }}
-          slug: packetworks/nxfilter-base
-          readme: ./README.md
+#      - uses: meeDamian/sync-readme@v1.0.6
+#        with:
+#          user: ${{ secrets.DOCKERHUB_USERNAME }}
+#          #pass: ${{ secrets.DOCKER_PASS }}
+#          pass: ${{ secrets.DOCKERHUB_TOKEN }}
+#          slug: packetworks/nxfilter-base
+#          readme: ./README.md
