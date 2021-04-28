@@ -13,7 +13,7 @@ COPY entrypoint.sh url.txt /
 # Download and extract nxfilter
 RUN wget -i /url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
-  && unzip nxfilter.zip -d /nxfilter \
+  && unzip -q nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
 
