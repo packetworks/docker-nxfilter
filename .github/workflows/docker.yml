@@ -46,5 +46,5 @@ jobs:
           user: ${{ secrets.DOCKERHUB_USERNAME }}
           #pass: ${{ secrets.DOCKER_PASS }}
           pass: ${{ secrets.DOCKERHUB_TOKEN }}
-          slug: packetworks/nxfilter-base:latest
+          slug: packetworks/nxfilter-base
           readme: ./README.md
