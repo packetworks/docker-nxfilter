@@ -21,7 +21,7 @@ RUN apk update \
   && rm -f /var/cache/apk/* \
   && xargs </url.txt curl -o nxfilter.zip -s \
   && mkdir /nxfilter \
-  && unzip nxfilter.zip -d /nxfilter \
+  && unzip -q nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
 
