@@ -47,4 +47,4 @@ jobs:
           #pass: ${{ secrets.DOCKER_PASS }}
           pass: ${{ secrets.DOCKERHUB_TOKEN }}
           slug: packetworks/nxfilter-base:latest
-          readme: ./docker/description.md
+          readme: ./README.md
