@@ -41,4 +41,3 @@ jobs:
           push: true
           tags: packetworks/nxfilter-base:latest 
           labels: ${{ steps.docker_meta.outputs.labels }}
-© 2021 GitHub, Inc.
