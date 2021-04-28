@@ -19,9 +19,9 @@ COPY /root entrypoint.sh url.txt /
 RUN apk update \
   && apk add openjdk8-jre tomcat-native apr curl bash \
   && rm -f /var/cache/apk/* \
-  && xargs </url.txt curl -o nxfilter.zip -s \
+  && wget -nv -i /url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
-  && unzip -q nxfilter.zip -d /nxfilter \
+  && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
 
@@ -29,6 +29,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/nxfilter/bin/startup.sh"]
 
+
+#xargs </url.txt curl -o nxfilter.zip -s
 
 #RUN curl -s -L http://www.nxfilter.org/|grep Download |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" |grep download|uniq |xargs -n1 curl -s -L |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" |grep filter-.*zip|grep -v mediafire |xargs -n1 wget -q && mkdir -p /nxfilter && unzip -o nxfil* -d /nxfilter && cp -R /nxfilter/conf /nxfilter/conf-default && chmod +x /nxfilter/bin/startup.sh && rm -f *.zip
 ##RUN echo "http://www.nxfilter.org/"$(curl -sL nxfilter.org/download.php|grep zip|grep nxfilter|head -n1|sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//'  -e '/^$/ d'|tr -d '[:blank:]') > url
