@@ -11,7 +11,7 @@ COPY --from=vimagick/sslsplit /usr/local/bin/sslsplit /usr/local/bin/
 COPY entrypoint.sh url.txt /
 
 # Download and extract nxfilter
-RUN wget -nv -i /url.txt -O nxfilter.zip \
+RUN xargs </url.txt curl -o nxfilter.zip -s \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
