@@ -16,9 +16,7 @@ COPY /root entrypoint.sh url.txt /
 #  && apt -y autoremove \
 #  && rm -rf /var/lib/apt && rm -rf /var/lib/dpkg && rm -rf /var/lib/cache && rm -rf /var/lib/log
 
-RUN apk update \
-  && apk add openjdk8-jre tomcat-native apr curl bash \
-  && rm -f /var/cache/apk/* \
+RUN apk add --no-cache openjdk8-jre tomcat-native apr curl bash \
   && wget -nv -i /url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
