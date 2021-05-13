@@ -18,7 +18,7 @@ COPY /root entrypoint.sh url.txt /
 
 RUN apk add --no-cache openjdk8-jre tomcat-native apr curl bash
 
-RUN wget -nv -i /url.txt -O nxfilter.zip \
+RUN xargs </url.txt curl -o nxfilter.zip -s \
   && mkdir /nxfilter \
   && unzip nxfilter.zip -d /nxfilter \
   && chmod +x /nxfilter/bin/startup.sh \
@@ -47,3 +47,9 @@ CMD ["/nxfilter/bin/startup.sh"]
 #  && echo .zip >> url.txt \
 #  && tr -d '\n' < url.txt > url \
 #  && wget -i url.txt -O nxfilter.zip
+
+# wget -nv -i /url.txt -O nxfilter.zip
+
+# url.txt 
+# url="http://pub.nxfilter.org/nxfilter-x.x.x.x.zip"
+# curl -K /url.txt
