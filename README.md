@@ -4,7 +4,7 @@
  
 [NxFilter](http://www.nxfilter.org/) - An easy to use DNS server with configurable filters and user controls.
   
-This image is based on [1science/java](https://registry.hub.docker.com/u/1science/java/) for the slimmed down Java and overall container footprint.
+The `latest` image is based on [1science/java](https://registry.hub.docker.com/u/1science/java/) for the slimmed down Java and overall container footprint. This is slated to change in the future. Debian will give faster startup performance, and possibly other areas as well, with a tradeoff of a much larger image and in some cases more RAM usage.
 
 # Supported Tags  
 
@@ -69,4 +69,8 @@ Vincent Tacquet
 Adam Trust  
 Daniele (brugnara)  
 Nathan Sanders  
-.
+
+## Roadmap
+Alpine image changes
+CI/CD pipeline for safer images with more testing
+
