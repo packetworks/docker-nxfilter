@@ -19,6 +19,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
     - uses: actions/setup-node@v1
     - name: Check version.txt against curver.php
       run: |
@@ -32,6 +34,6 @@ jobs:
       uses: Automattic/action-commit-to-branch@master
       with:
         branch: 'nxfilter-latest'
-        commit_message: 'GitHub Actions update version.txt'
+        commit_message: 'PUSH version.txt to branch'
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
