@@ -32,7 +32,7 @@ jobs:
     - name: Push back to branch
       uses: Automattic/action-commit-to-branch@master
       with:
-        branch: 'nxfilter-debian'
+        branch: 'nxfilter-debian-experimental'
         commit_message: 'GitHub Actions update version.txt'
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
