@@ -35,4 +35,4 @@ jobs:
         branch: 'nxfilter-debian'
         commit_message: 'GitHub Actions update version.txt'
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
