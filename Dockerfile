@@ -36,7 +36,7 @@ ENV container=docker \
 COPY --from=vimagick/sslsplit /usr/local/bin/sslsplit /usr/local/bin/
 
 # Copy packages from Builder.
-COPY --from=builder /usr/lib/x86_64-linux-gnu/ /usr/lib/x86_64-linux-gnu/
+# COPY --from=builder /usr/lib/x86_64-linux-gnu/ /usr/lib/x86_64-linux-gnu/ #got an error with this one at build time
 COPY --from=builder /usr/share/lintian/overrides /usr/share/lintian/overrides
 COPY --from=builder /usr/bin/apr-1-config /usr/bin/apr-config /usr/bin/
 COPY --from=builder /usr/include/apr-1.0 /usr/include/apr-1.0
