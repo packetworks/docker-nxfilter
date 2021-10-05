@@ -17,6 +17,13 @@ RUN xargs </url.txt curl -o nxfilter.zip -s \
   && chmod +x /nxfilter/bin/startup.sh \
   && rm -f nxfilter.zip
 
+EXPOSE 80
+EXPOSE 443
+EXPOSE 53/udp
+EXPOSE 19002
+EXPOSE 19003
+EXPOSE 19004
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/nxfilter/bin/startup.sh"]
