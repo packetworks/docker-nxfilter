@@ -1,1 +1,1 @@
-http://pub.nxfilter.org/nxfilter-4.5.4.5.zip
+http://pub.nxfilter.org/nxfilter-4.6.0.2.zip
