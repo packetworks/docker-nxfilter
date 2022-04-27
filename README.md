@@ -1,4 +1,4 @@
-[![](https://images.microbadger.com/badges/image/packetworks/nxfilter-base:debian.svg)](https://microbadger.com/images/packetworks/nxfilter-base:debian "Get your own image badge on microbadger.com") [![Docker Stars](https://img.shields.io/docker/stars/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/) [![Docker Pulls](https://img.shields.io/docker/pulls/packetworks/nxfilter-base.svg)](https://hub.docker.com/r/packetworks/nxfilter-base/)
+[![](https://images.microbadger.com/badges/image/packetworks/nxfilter-base:debian.svg)](https://microbadger.com/images/packetworks/nxfilter-base:debian) [![Docker Stars](https://badgen.net/docker/stars/packetworks/nxfilter-base?icon=docker&label=stars)](https://hub.docker.com/r/packetworks/nxfilter-base/tags) [![Docker Pulls](https://badgen.net/docker/pulls/packetworks/nxfilter-base?icon=docker&label=pulls)](https://hub.docker.com/r/packetworks/nxfilter-base/tags)
   
 ![](https://nxfilter.org/p3/wp-content/uploads/2013/10/rb_logo41.png)  
  
