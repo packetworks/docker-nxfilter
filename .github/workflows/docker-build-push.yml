@@ -41,6 +41,12 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_REPO }}:latest 
           labels: ${{ steps.docker_meta.outputs.labels }}
+      - name: Update repo description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: ${{ secrets.DOCKER_HUB_REPO }}
 #      - uses: meeDamian/sync-readme@v1.0.6
 #        with:
 #          user: ${{ secrets.DOCKERHUB_USERNAME }}
