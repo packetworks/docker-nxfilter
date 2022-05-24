@@ -39,7 +39,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm64/v8
           push: true
-          tags: packetworks/nxfilter-base:latest 
+          tags: ${{ secrets.DOCKER_HUB_REPO }}:latest 
           labels: ${{ steps.docker_meta.outputs.labels }}
 #      - uses: meeDamian/sync-readme@v1.0.6
 #        with:
