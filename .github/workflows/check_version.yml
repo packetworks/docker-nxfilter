@@ -34,6 +34,6 @@ jobs:
       uses: Automattic/action-commit-to-branch@master
       with:
         branch: 'nxfilter-latest'
-        commit_message: 'PUSH version.txt to branch'
+        commit_message: 'PUSH triggered by Github Actions'
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
