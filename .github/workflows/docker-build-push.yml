@@ -52,14 +52,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_REPO }}:latest 
           labels: ${{ steps.docker_meta.outputs.labels }}
-          
-      - name: Update repo description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ secrets.DOCKER_HUB_REPO }}
-          
+                   
       - # copy multiplatform image from dockerhub to quay and ghcr
         name: Push Image to multiple registries
         uses: akhilerm/tag-push-action@v2.0.0
@@ -70,7 +63,18 @@ jobs:
           # quay.io/user/app:1.0.0
           # ghcr.io/${{ secrets.DOCKER_TAG }}:latest
           # ghcr.io/user/app:1.0.0
-          
+
+
+
+
+
+#      - name: Update repo description
+#        uses: peter-evans/dockerhub-description@v2
+#        with:
+#          username: ${{ secrets.DOCKERHUB_USERNAME }}
+#          password: ${{ secrets.DOCKERHUB_TOKEN }}
+#          repository: ${{ secrets.DOCKER_HUB_REPO }}
+
 #      - uses: meeDamian/sync-readme@v1.0.6
 #        with:
 #          user: ${{ secrets.DOCKERHUB_USERNAME }}
