@@ -6,11 +6,8 @@ name: Fetch and Compare NxFilter version
 
 on:
   schedule:
-    - cron:  '0 0 * * *'
-#  push:
-#    branches: [ nxfilter-pi-experimental ]
-#  pull_request:
-#    branches: [ nxfilter-pi-experimental ]
+    - cron:  '0 45 * * *'
+
 env:
   VERSION: ""
 
@@ -20,6 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
     - uses: actions/setup-node@v1
     - name: Check version.txt against curver.php
       run: |
