@@ -11,8 +11,7 @@ COPY --from=vimagick/sslsplit /usr/local/bin/sslsplit /usr/local/bin/
 COPY entrypoint.sh url.txt /
 
 # Fix DNS
-RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf && \
-  apk update && apk add bind-tools
+RUN apk update && apk add bind-tools
 
 # Download and extract nxfilter
 RUN xargs </url.txt curl -o nxfilter.zip -s \
