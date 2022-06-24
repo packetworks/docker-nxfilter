@@ -24,6 +24,8 @@ nxfilter:
     - nxfilter-log:/nxfilter/log
     - nxfilter-db:/nxfilter/db
   restart: unless-stopped
+  dns:
+    - "1.1.1.1"
   ports:
     - 80:80
     - 443:443
@@ -35,6 +37,7 @@ nxfilter:
 ```
 docker run -it \
   --name nxfilter \
+  --dns="1.1.1.1" \
   --restart unless-stopped \
   -p 80:80 -p 443:443\
   -p 53:53/udp \
@@ -51,6 +54,7 @@ The interactive console can be sent to the background with CTRL-P + CTRL-Q.
 ```
 docker run -dt \
   --name nxfilter \
+  --dns="1.1.1.1" \
   --restart unless-stopped \
   -v nxfilter-conf:/nxfilter/conf \
   -v nxfilter-log:/nxfilter/log \
