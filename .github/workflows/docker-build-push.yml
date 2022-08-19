@@ -58,9 +58,9 @@ jobs:
         name: Push Image to multiple registries
         uses: akhilerm/tag-push-action@v2.0.0
         with:
-          src: docker.io/${{ secrets.DOCKER_TAG }}:latest
+          src: docker.io/${{ secrets.DOCKER_HUB_REPO }}:latest
           dst: |
-            quay.io/${{ secrets.DOCKER_TAG }}:latest
+            quay.io/${{ secrets.DOCKER_HUB_REPO }}:latest
           # quay.io/user/app:1.0.0
           # ghcr.io/${{ secrets.DOCKER_TAG }}:latest
           # ghcr.io/user/app:1.0.0
