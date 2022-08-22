@@ -6,7 +6,8 @@ name: Fetch and Compare NxFilter version
 
 on:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 13 * * *'
+
 #  push:
 #    branches: [ nxfilter-pi-experimental ]
 #  pull_request:
