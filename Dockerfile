@@ -12,7 +12,7 @@ COPY url.txt /
 # Download and unzip nxfilter from nxfilter.org
 RUN wget -nv -i url.txt -O nxfilter.zip \
   && mkdir /nxfilter \
-  && unzip nxfilter.zip -d /nxfilter \
+  && unzip -q nxfilter.zip -d /nxfilter \
   && rm -f nxfilter.zip
 
 
