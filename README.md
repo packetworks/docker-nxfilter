@@ -64,8 +64,11 @@ docker run -dt \
   packetworks/nxfilter-base:latest
 ```
 This will run the container in the background like a service, with all user data saved in separate docker volumes.
-  
-  
+
+**Synology:**
+
+Be sure Web Station is either uninstalled or the default ports are changed to something other than 80 and 443. This applies to any machine that could be running an HTTP or HTTPS server as NxFilter may collide with port assignments. 
+
    
 ## A much deserved Thank You to contributors and testers  
 Daniel Gibbs  
@@ -75,6 +78,6 @@ Daniele (brugnara)
 Nathan Sanders  
 
 ## Roadmap
-Alpine image changes
-CI/CD pipeline for safer images with more testing
+Alpine image changes  
+CI/CD pipeline for safer images with more testing  
 
