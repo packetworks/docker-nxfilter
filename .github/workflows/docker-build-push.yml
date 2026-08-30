@@ -12,7 +12,7 @@ jobs:
         
       - name: Docker meta
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v4
+        uses: crazy-max/ghaction-docker-meta@v5
         with:
           images: dersimn/helloarm  # list of Docker images to use as base name for tags
           tag-sha: false            # add git short SHA as Docker tag, e.g.: sha-12affe0
